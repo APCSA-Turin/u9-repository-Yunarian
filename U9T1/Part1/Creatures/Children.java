@@ -1,4 +1,4 @@
-package bleh;
+package Creatures;
 
 public class Children extends People{
     private boolean hasOwnRoom;

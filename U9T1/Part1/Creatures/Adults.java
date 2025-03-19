@@ -1,4 +1,4 @@
-package bleh;
+package Creatures;
 
 public class Adults extends People{
     private String placeOfWork;

@@ -1,4 +1,4 @@
-package bleh;
+package Creatures;
 
 public class People {
     private int age;
