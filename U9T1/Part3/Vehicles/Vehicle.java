@@ -34,4 +34,17 @@ public class Vehicle {
     public double calculateTollPrice() {
       return tollFee * passengers;
     }
+
+    public void printInfo() {
+      System.out.println("License plate: " + licensePlate);
+      System.out.println("Toll fee: " + tollFee);
+      System.out.println("Passengers: " + passengers);
+    }
+
+    public boolean validDriver(int driverAge, boolean driver) {
+      if (driverAge < 16 || !driver) {
+        return false;
+      }
+      return true;
+    }
   }

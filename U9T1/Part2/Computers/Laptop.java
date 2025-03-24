@@ -20,4 +20,9 @@ public class Laptop extends Computer{
             System.out.println("No need to calibrate");
         }
     }
+
+    @Override
+    public void installOperatingSystem() {
+        System.out.println("installing OS on a laptop...");
+    }
 }

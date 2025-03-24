@@ -13,11 +13,7 @@ public class Taxi extends Car {
     }
 
     public void printTaxi() {
-        System.out.println("License plate: " + getLicensePlate());
-        System.out.println("Toll fee: " + getTollFee());
-        System.out.println("Passengers: " + getPassengers());
-        System.out.println("Electric?: " + isElectric());
-        System.out.println("discountApplied?: " + isDiscountApplied());
+        super.printInfo();
         System.out.println("Fare collected: " + fareCollected);
 
     }
@@ -31,5 +27,21 @@ public class Taxi extends Car {
 
         fareCollected += farePerRider * numRiders;
 
+    }
+
+    public boolean chargeAndDropOffRiders(double farePerRider) {
+        int peopleLeaving = getPassengers() - 1;
+        fareCollected += peopleLeaving * farePerRider;
+
+        boolean jim = dropOffPassengers(peopleLeaving);
+        return jim;
+    }
+
+    public boolean validDriver(int driverAge, boolean driver, boolean taxiLicense) {
+        boolean isValid = super.validDriver(driverAge, driver);
+        if (isValid && taxiLicense) {
+            return true;
+        }
+        return false;
     }
 }
